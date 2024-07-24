@@ -1,0 +1,44 @@
+:root {
+  --backgroundColor: rgb(248, 248, 248);
+}
+/* ======================== Navbar main container =============== */
+.main-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+
+  position: fixed;
+}
+.left-conatainer {
+  width: 30%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-left: 20px;
+}
+.left-conatainer i {
+  font-size: 30px;
+}
+
+.center-conatainer {
+  width: 40%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.right-conatainer {
+  width: 30%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 20px;
+}
