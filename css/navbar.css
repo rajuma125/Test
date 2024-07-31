@@ -1,5 +1,7 @@
 :root {
   --backgroundColor: rgb(248, 248, 248);
+  --font-hover-color: tomato;
+  --navColor: #b2e0df;
 }
 /* ======================== Navbar main container =============== */
 .main-container {
@@ -8,10 +10,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--backgroundColor);
+  background-color: var(--navColor);
 
   position: fixed;
 }
+
+/* ========================== Left =========================== */
 .left-conatainer {
   width: 30%;
   height: inherit;
@@ -22,9 +26,20 @@
   margin-left: 20px;
 }
 .left-conatainer i {
-  font-size: 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+  /* box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2); */
+}
+.left-conatainer div :hover {
+  color: var(--font-hover-color);
+  font-size: 1.7em;
 }
 
+/* ================================ Center =================================== */
 .center-conatainer {
   width: 40%;
   height: inherit;
@@ -33,12 +48,70 @@
   gap: 10px;
   justify-content: center;
 }
+.center-conatainer > div {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-conatainer > div i {
+  color: white;
+  font-size: 1.3em;
+}
+#search i {
+  color: var(--navColor);
+  position: absolute;
+  right: 520px;
+}
+.center-conatainer > div :hover {
+  color: var(--font-hover-color);
+   cursor: pointer;
+}
+.center-conatainer > div > input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 50px 50px 50px 50px;
+  border: none;
+  outline: none;
+  background-color: #ffff;
+  text-indent: 2px;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.center-conatainer > div > input:focus {
+  /* background-color: var(--font-hover-color);
+  color: aliceblue; */
+}
+
+::placeholder {
+  text-transform: capitalize;
+}
+
+/* =================================== Left ================================== */
 .right-conatainer {
   width: 30%;
   height: inherit;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 25px;
   margin-right: 20px;
+}
+.right-conatainer i {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+.right-conatainer div :hover {
+  color: var(--font-hover-color);
+  font-size: 1.7em;
+}
+
+#profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
 }
